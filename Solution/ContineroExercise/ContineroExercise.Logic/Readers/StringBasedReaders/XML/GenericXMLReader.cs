@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace ContineroExercise.Logic.Readers.StringBasedReaders.XML
 {
-    public abstract class GenericXMLReader<TModel> : StringBasedReader<TModel>
+    public class GenericXMLReader<TModel> : StringBasedReader<TModel>
     {
         protected override TModel CreateModel(string xmlString)
         {
