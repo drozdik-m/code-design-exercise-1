@@ -10,7 +10,7 @@ namespace ContineroExercise.Logic.Tests.Sources.FileSystem
         {
             public override Task<Stream> GetStreamAsync()
             {
-                var stream = new MemoryStream(Encoding.ASCII.GetBytes("Toto je test"));
+                var stream = new MemoryStream(Encoding.UTF8.GetBytes("Toto je test"));
 
                 Stream result = stream;
                 return Task.FromResult(result);

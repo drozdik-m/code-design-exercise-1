@@ -9,7 +9,7 @@ namespace ContineroExercise.Logic.Tests.Sources.FileSystem
         [Test]
         public async Task MemoryStreamConstructor()
         {
-            using var stream = new MemoryStream(Encoding.ASCII.GetBytes("Toto je test"));
+            using var stream = new MemoryStream(Encoding.UTF8.GetBytes("Toto je test"));
             stream.Flush();
             var source = new MemoryDataSource(stream);
             Assert.That(await source.GetStreamAsStringAsync(), Is.EqualTo("Toto je test"));
@@ -18,7 +18,7 @@ namespace ContineroExercise.Logic.Tests.Sources.FileSystem
         [Test]
         public async Task ByteConstructor()
         {
-            var source = new MemoryDataSource(Encoding.ASCII.GetBytes("Toto je test"));
+            var source = new MemoryDataSource(Encoding.UTF8.GetBytes("Toto je test"));
             Assert.That(await source.GetStreamAsStringAsync(), Is.EqualTo("Toto je test"));
         }
 

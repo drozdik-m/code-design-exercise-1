@@ -16,8 +16,8 @@ namespace ContineroExercise.Logic.Data.Readers
             var xdoc = XDocument.Parse(data);
             var doc = new Document
             {
-                Title = xdoc.Root.Element("title").Value,
-                Text = xdoc.Root.Element("text").Value
+                Title = xdoc.Root.Element("Title").Value,
+                Text = xdoc.Root.Element("Text").Value
             };
             return doc;
         }

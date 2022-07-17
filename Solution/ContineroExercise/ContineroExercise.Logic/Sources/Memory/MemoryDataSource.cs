@@ -28,7 +28,7 @@ namespace ContineroExercise.Logic.Sources.Memory
 
         public MemoryDataSource(string text)
         {
-            memoryStream = new MemoryStream(Encoding.ASCII.GetBytes(text));
+            memoryStream = new MemoryStream(Encoding.UTF8.GetBytes(text));
         }
 
         /// <inheritdoc/>

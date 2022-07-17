@@ -14,7 +14,7 @@ namespace ContineroExercise.Logic.Readers.StringBasedReaders.XML
         protected override TModel CreateModel(string xmlString)
         {
             XmlSerializer serializer = new(typeof(TModel));
-            using var stream = new MemoryStream(Encoding.ASCII.GetBytes(xmlString));
+            using var stream = new MemoryStream(Encoding.UTF8.GetBytes(xmlString));
             TModel? result = (TModel?)serializer.Deserialize(stream);
             if (result is null)
                 throw new Exception($"Could not generally transform the XML model");
