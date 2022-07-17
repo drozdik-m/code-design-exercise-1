@@ -1,5 +1,4 @@
-﻿using ContineroExercise.Logic.Sources;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ContineroExercise.Logic.Sources.FileSystem
 {
-    public class FileDataSource : IDataSource
+    public class FileDataSource : DataSource
     {
         private readonly string filePath;
 
@@ -16,7 +15,7 @@ namespace ContineroExercise.Logic.Sources.FileSystem
             this.filePath = filePath;
         }
 
-        public Task<Stream> GetStreamAsync()
+        public override Task<Stream> GetStreamAsync()
         {
             //Check the file existence
             if (!File.Exists(filePath))
