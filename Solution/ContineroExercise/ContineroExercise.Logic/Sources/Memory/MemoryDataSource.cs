@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ContineroExercise.Logic.Sources.Memory
 {
+    /// <summary>
+    /// In-Memory data source
+    /// </summary>
     public class MemoryDataSource : DataSource
     {
         readonly MemoryStream memoryStream = new();
@@ -28,6 +31,7 @@ namespace ContineroExercise.Logic.Sources.Memory
             memoryStream = new MemoryStream(Encoding.ASCII.GetBytes(text));
         }
 
+        /// <inheritdoc/>
         public override Task<Stream> GetStreamAsync()
         {
             Stream result = memoryStream;

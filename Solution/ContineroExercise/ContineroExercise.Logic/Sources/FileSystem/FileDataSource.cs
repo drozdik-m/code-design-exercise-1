@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ContineroExercise.Logic.Sources.FileSystem
 {
+    /// <summary>
+    /// File data source
+    /// </summary>
     public class FileDataSource : DataSource
     {
         private readonly string filePath;
@@ -15,6 +18,7 @@ namespace ContineroExercise.Logic.Sources.FileSystem
             this.filePath = filePath;
         }
 
+        /// <inheritdoc />
         public override Task<Stream> GetStreamAsync()
         {
             //Check the file existence
