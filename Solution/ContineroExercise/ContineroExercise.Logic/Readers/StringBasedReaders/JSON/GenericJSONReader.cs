@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ContineroExercise.Logic.Readers.StringBasedReaders.JSON
 {
-    public abstract class GenericJSONReader<TModel> : JSONReader<TModel>
+    public class GenericJSONReader<TModel> : JSONReader<TModel>
     {
         protected override TModel CreateModel(string jsonString)
         {
