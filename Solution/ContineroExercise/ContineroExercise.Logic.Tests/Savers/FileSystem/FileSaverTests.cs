@@ -3,10 +3,10 @@ using System.Text;
 
 namespace ContineroExercise.Logic.Tests.Sources.FileSystem
 {
-    public class FileSystemDataSrouceTests
+    public class FileSaverTests
     {
         [Test]
-        public async Task FileRead()
+        public async Task FileSave()
         {
             var guid = Guid.NewGuid().ToString();
             var filePath = $"./{guid}.txt";
